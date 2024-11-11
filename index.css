@@ -184,7 +184,7 @@ nav .navlinks li a:hover {
 @media(max-width:930px)
 {
     nav {
-        display:none;
+        display:hide;
     }
     nav .togglebtn{
         display: initial;
@@ -237,7 +237,7 @@ nav .navlinks li a:hover {
 @media(max-width:768px)
 {
     nav {
-        display:none;
+        display:hide;
     }
     .container{
         flex-direction: column;
@@ -343,7 +343,7 @@ nav .navlinks li a:hover {
 @media(max-width: 991px)
 {
     nav {
-        display:none;
+        display:hide;
     }
     .wrapper-2{
         padding:25px;
