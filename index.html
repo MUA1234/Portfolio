@@ -39,7 +39,6 @@
             <li><a href="#">Blog</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-        <div class="good" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -83,16 +82,6 @@
     <!---typed js for typing text effect-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
     <script>
-        /** creating button click show hide navbar **/
-        var togglebtn = document.querySelector(".togglebtn");
-        var nav = document.querySelector(".navlinks");
-        var links = document.querySelector(".navlinks li");
-
-        togglebtn.addEventListener("click", function () {
-            this.classList.toggle("click");
-            nav.classList.toggle("open");
-        });
-
         var textColorMapping = {
             "C# Systems Developer": "#ff0000", // Red
             "Graphic Designer": "#90ff46", // Green
