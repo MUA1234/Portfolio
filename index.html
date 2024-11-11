@@ -41,6 +41,14 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
+                <script>
+                    const toggleButton = document.querySelector('.toggle-button');
+                    const navLinks = document.querySelector('.navlinks');
+
+                    toggleButton.addEventListener('click', () => {
+                    navLinks.classList.toggle('open');
+                     });
+                </script>
 
                 <!--YOUR CONTENT START-->
 
