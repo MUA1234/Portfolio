@@ -24,27 +24,26 @@
     <div class="hero-header">
         <div class="wrapper">
             <header>
-    <div class="toggle-button">
-        <!-- Your toggle button icon, like a hamburger menu -->
-        <span>☰</span>
+             <nav class="navbar">
+    <div class="navbar-container">
+        <div class="logo">
+            <a href="#">Logo</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
-    <nav>
-        <ul class="navlinks">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="resume.html">Resume</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-    </nav>
+</nav>
 
-                <script>
-                    const toggleButton = document.querySelector('.toggle-button');
-const navLinks = document.querySelector('.navlinks');
 
-toggleButton.addEventListener('click', () => {
-    navLinks.classList.toggle('open'); // Toggles the .open class to show/hide
-});
-                </script>
 
                 <!--YOUR CONTENT START-->
 
@@ -181,6 +180,7 @@ toggleButton.addEventListener('click', () => {
     <!--Our services end-->
 
     <!--YOUR CONTENT END-->
+    <script src="script.js"></script>
 </body>
 
 </html>
