@@ -220,8 +220,8 @@ nav .navlinks li a:hover {
         z-index: 3;
         box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
         transition: transform 0.5s ease;
-        transform: translateX(100%);
-        display: none;
+        transform: translateX(100%); /* Out of view */
+        display: none; /* Hidden */
         padding: 25px 0;
     }
     nav .navlinks li{
@@ -233,15 +233,12 @@ nav .navlinks li a:hover {
         text-align: center;
     }
     nav .navlinks.open{
-        right:0;
-        transform: translateX(0);
+        transform: translateX(0); /* Bring into view */
+        display: block; /* Make visible */
     }
 }
 @media(max-width:768px)
 {
-    .navbar {
-        display:none;
-    }
     .container{
         flex-direction: column;
         padding-top:2rem
@@ -345,9 +342,6 @@ nav .navlinks li a:hover {
 /***Responsive***/
 @media(max-width: 991px)
 {
-    .navbar {
-        display:none;
-    }
     .wrapper-2{
         padding:25px;
     }
