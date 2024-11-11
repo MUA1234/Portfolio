@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="index.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!--Background image start-->
+    <div class="image-container">
+        <img src="images/dark-gray-wall-with-wooden-plank-product-background.jpg" class="background-image"
+            alt="Background Image">
+    </div>
+    <!--Background image end-->
+
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-m"></i>
+                    <div class="logo-text">Malith Adikaram</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!--YOUR CONTENT START-->
+
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images/Portfolio.png" alt="profile pic">
+                </div>
+                <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                    <h1>Malith Adikaram</h1>
+                    <p> Hello! I'm a professional when it comes to work. Either
+                        it's in my comfort zone or not, I will still be able to
+                        come up with solutions with a ton of connections and some hardworking skills.
+                    </p>
+
+                    <div class="btn-group">
+                        <a href="images/Malith%20Adikaram%20CV.pdf" class="btn active" download>Download CV</a>
+                        <a href="contact.html" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://www.facebook.com/profile.php?id=100091982385638"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/malith-adikaram/?originalSubdomain=lk"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/m_u_a._m/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/+94713147470"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://t.me/malithadikaram"><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---typed js for typing text effect-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        /** creating button click show hide navbar **/
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+        var links = document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function () {
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+
+        var textColorMapping = {
+            "C# Systems Developer": "#ff0000", // Red
+            "Graphic Designer": "#90ff46", // Green
+            "Music Producer": "#4d83f0", // Blue
+            "Frontend Developer": "#ffff00", // Yellow
+            "UI/UX Designer": "#ff00ff", // Magenta
+            "Web Developer": "#00ffff"  // Cyan
+        };
+
+        var typed = new Typed(".input", {
+            strings: [
+                "C# Systems Developer",
+                "Graphic Designer",
+                "Music Producer",
+                "Frontend Developer",
+                "UI/UX Designer",
+                "Web Developer"
+            ],
+            typeSpeed: 70,
+            backSpeed: 55,
+            loop: true,
+            onStringTyped: function (index, self) {
+                var currentText = self.strings[index];
+                document.querySelector('.input').style.color = textColorMapping[currentText];
+            }
+        });
+    </script>
+
+    <!--Our services start-->
+    <div class="wrapper-2">
+        <h1>Our Services</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curbitur malesuada quam quis urna varius
+            tincidunt.</p>
+
+        <div class="content-box">
+            <div class="card">
+                <i class="bx bx-bar-chart-alt bx-md"></i>
+                <h2>Content Creation</h2>
+                <p>
+                    I make eye-catching tik-toks, reels and posts to have a lasting impression.
+                </p>
+            </div>
+
+            <div class="card">
+                <i class="bx bx-laptop bx-md"></i>
+                <h2>Web App Development</h2>
+                <p>
+                    I will create your desired website with less time, applying modern layouts that will keep it running
+                    without getting outdated.
+                </p>
+            </div>
+
+            <div class="card">
+                <i class="bx bx-paint bx-md"></i>
+                <h2>Graphic Design</h2>
+                <p>
+                    Using Adobe softwares(Photoshop, Illustrator, After Effects, Premier pro), I will make your designs
+                    stand out.
+                </p>
+            </div>
+
+            <div class="card">
+                <i class="bx bx-mail-send bx-md"></i>
+                <h2>Social Media Marketing</h2>
+                <p>
+                    I create social media posts, stories, create business plans for social media pages, and many more.
+                </p>
+            </div>
+
+            <div class="card">
+                <i class="bx bx-bar-chart-alt bx-md"></i>
+                <h2>UI/UX Development</h2>
+                <p>
+                    Using Figma software, I create mobile, web and other system UI & UX designs.
+                </p>
+            </div>
+
+            <div class="card">
+                <i class="bx bx-music bx-md"></i>
+                <h2>Music Production</h2>
+                <p>
+                    Using FL Studio, Ableton, I can create your desired soundtrack, mix & master, Produce music, e.t.c..
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--Our services end-->
+
+    <!--YOUR CONTENT END-->
+</body>
+
+</html>
