@@ -52,14 +52,14 @@ body{
 }
 
 /* Responsive */
-.togglebtn {
+.menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
 }
 
-.togglebtn span {
+.menu-toggle span {
     width: 25px;
     height: 3px;
     background: #333;
@@ -84,7 +84,7 @@ body{
         display: flex;
     }
 
-    .togglebtn {
+    .menu-toggle {
         display: flex;
     }
 }
