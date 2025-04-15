@@ -1729,6 +1729,37 @@
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
+        /* Fix for parallax title responsiveness on small screens */
+        @media screen and (max-width: 768px) {
+            .parallax-title {
+                font-size: 2.5rem;
+                padding: 0 15px;
+            }
+
+            .parallax-text {
+                font-size: 1.1rem;
+                padding: 0 20px;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .parallax-title {
+                font-size: 2rem;
+                letter-spacing: 2px;
+            }
+
+            .parallax-text {
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            .parallax-title {
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+            }
+        }
+
         /* Responsive Design */
         @media screen and (max-width: 1024px) {
 
