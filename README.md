@@ -1,1 +1,1 @@
-![profile](profile.png)
+![profile](profile.PNG)
