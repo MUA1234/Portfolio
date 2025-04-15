@@ -2682,6 +2682,8 @@
         </div>
     </footer>
 
+    <audio id="backgroundAudio" src="audio.mp3" loop preload="auto"></audio>
+
     <!-- JavaScript Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -3414,6 +3416,44 @@
                 }
             });
         });
+
+       // Simplified audio autoplay approach
+document.addEventListener('DOMContentLoaded', function() {
+  const audio = document.getElementById('backgroundAudio');
+  
+  // Function to play audio
+  function playAudio() {
+    // Reset to beginning if it was playing before
+    audio.currentTime = 0;
+    
+    // Try to play
+    const playPromise = audio.play();
+    
+    if (playPromise !== undefined) {
+      playPromise.catch(error => {
+        console.error("Audio play failed:", error);
+      });
+    }
+  }
+  
+  // Attempt initial play (likely to be blocked)
+  playAudio();
+  
+  // Play on first user interaction
+  function onUserInteraction() {
+    playAudio();
+    
+    // Remove all event listeners once triggered
+    ['click', 'touchstart', 'keydown', 'scroll'].forEach(event => {
+      document.removeEventListener(event, onUserInteraction);
+    });
+  }
+  
+  // Add event listeners for common user interactions
+  ['click', 'touchstart', 'keydown', 'scroll'].forEach(event => {
+    document.addEventListener(event, onUserInteraction);
+  });
+});
     </script>
 </body>
 
